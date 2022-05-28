@@ -1,3 +1,4 @@
+@import "./uikit.scss";
 @import "../layouts/base.scss";
 
 $primary: blue;
@@ -10,4 +11,8 @@ h1 {
     color: $primary;
     font-weight: bold;
     font-family: 'Montserrat', sans-serif;
+}
+
+a {
+    color: red;
 }

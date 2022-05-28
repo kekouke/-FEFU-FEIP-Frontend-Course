@@ -1,4 +1,5 @@
 const mix = require('laravel-mix');
+const { resolve } = require('path');
 
 /*
  |--------------------------------------------------------------------------
@@ -23,3 +24,5 @@ mix
             'resources/**/*.php',
         ],
     });
+
+mix.alias({'uikit-util': resolve(__dirname, 'node_modules/uikit/src/js/util')});
