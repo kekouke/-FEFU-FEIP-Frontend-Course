@@ -1,18 +1,24 @@
 @import "./uikit.scss";
 @import "../layouts/base.scss";
 
-$primary: blue;
+// Variables
+$color-black: black;
+$color-gray: #666;
+$color-green--dark: #254741;
 
-body {
-    font-family: 'Open Sans', sans-serif;
+// Functions
+@function toRem($size) {
+    @return $size / 16px * 1rem;
 }
+// Elements
+@import "./elements.scss";
+
+// Components
+@import "../components/header/header.scss";
+@import "../components/site-nav/site-nav.scss";
+
 
 h1 {
-    color: $primary;
-    font-weight: bold;
-    font-family: 'Montserrat', sans-serif;
-}
-
-a {
-    color: red;
+    margin-left: 1rem;
+    color: green;
 }

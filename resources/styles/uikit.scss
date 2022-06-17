@@ -5,6 +5,16 @@ $base-list-padding-left: 0;
 $base-body-font-size: 100%;
 $base-em-color: inherit;
 
+$font-weight-medium: 500;
+$color-green: #029F59;
+
+$button-primary-background: $color-green;
+$button-primary-color: #fff;
+$button-primary-hover-background: darken($button-primary-background, 5%);
+$button-primary-hover-color: #fff;
+$button-primary-active-background: darken($button-primary-background, 10%);
+$button-primary-active-color: #fff;
+
 $base-body-line-height: 1.35;
 $base-h1-line-height: $base-body-line-height;
 $base-h2-line-height: $base-body-line-height;
@@ -31,6 +41,16 @@ $base-heading-font-family: 'Montserrat', sans-serif;
 // 3. Your custom mixin overwrites.
 @mixin hook-base-link {
     transition: color 0.25s ease-in-out;
+}
+
+@mixin hook-button() {
+    padding-x: 40px;
+    border-radius: 10px;
+    font-family: $base-heading-font-family;
+    font-weight: $font-weight-medium;
+    font-size: toRem(14px);
+    line-height: 49px;
+    transition: background-color 0.25s ease-in-out;
 }
 
 // 4. Import UIkit.
