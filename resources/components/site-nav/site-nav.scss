@@ -2,7 +2,37 @@
     display: flex;
     list-style: none;
 
+    &--column {
+        flex-flow: column;
+
+        %SiteNav--column__listItem {
+            :root & {
+                margin-right: unset;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 24px;
+            }
+        }
+    }
+
+    &--white {
+        %SiteNav--white__item {
+            :root & {
+                color: white;
+            }
+        }
+
+        &:hover, 
+        &:focus,
+        &:active {
+            color: $color-black;
+        }
+    }
+
     &__listItem {
+        @extend %SiteNav--column__listItem;
+
         &:not(:last-child) {
             margin-right: 24px;
         }

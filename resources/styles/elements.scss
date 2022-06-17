@@ -21,4 +21,47 @@
     &--primary {
         @extend .uk-button-primary;
     }
+
+    &--icon {
+        padding-x: 16px;
+    }
+}
+
+.OffCanvas {
+    &__layout {
+        display: flex;
+        flex-flow: column;
+        background-color: $color-green;
+        color: white;
+        padding-y: 6.5em 3em;
+    }
+
+    &__close {
+        top: 31px;
+        right: 39px;
+        padding: 10px;
+        border-radius: 6px;
+        background-color: rgba(white, 0.2);
+        cursor: pointer;
+
+        img {
+            display: block;
+        }
+
+        &:hover,
+        &:focus,
+        &:active {
+            background-color: $color-green--dark;
+        } 
+    }
+
+    &__nav {
+        flex-grow: 1;
+        margin-bottom: 1.5em;
+        font-size: 1.125em;
+    }
+
+    &__contacts {
+        font-size: 0.875em;
+    }
 }

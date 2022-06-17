@@ -1,0 +1,28 @@
+.ContactsSection {
+    display: grid;
+    gap: 1em;
+    color: inherit;
+
+    a {
+        color: inherit;
+
+        &:hover, 
+        &:focus,
+        &:active {
+            color: $color-black;
+        }
+    }
+}
+
+.ContactsItem {
+    display: flex;
+    flex-flow: row;
+    align-items: flex-start;
+    font-family: $base-heading-font-family;
+
+    &__icon {
+        flex-shrink: 0;
+        margin-right: 0.15em;
+        width: 1em;
+    }
+}
