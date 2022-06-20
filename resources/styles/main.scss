@@ -5,7 +5,9 @@
 // Variables
 $color-black: black;
 $color-gray: #666;
+$color-gray--light: #C6C6C6;
 $color-green--dark: #254741;
+$font-weight-bold: 700;
 
 // Functions
 @function toRem($size) {
@@ -18,6 +20,7 @@ $color-green--dark: #254741;
 @import "../components/header/header.scss";
 @import "../components/site-nav/site-nav.scss";
 @import "../components/contacts/contacts.scss";
+@import "../components/slider/slider.scss";
 
 
 h1 {

@@ -1,8 +1,34 @@
 {% extends '@layouts/base.twig' %}
 
+{% set scope = {
+    slides: [
+        {
+            desktopImage: 'assets/images/mockup/slides/slide-desktop.png',
+            mobileImage: 'assets/images/mockup/slides/slide-mobile.png',
+            title: 'Проектируем<br> и строим загородные дома',
+            text: 'Строим дома «под ключ»: от этапа проектирования и до финишной отделки помещений',
+        },
+        {
+            desktopImage: 'assets/images/mockup/slides/slide-desktop.png',
+            mobileImage: 'assets/images/mockup/slides/slide-mobile.png',
+            title: 'Lorem ipsum dolor sit amet',
+            text: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit',
+        },
+        {
+            desktopImage: 'assets/images/mockup/slides/slide-desktop.png',
+            mobileImage: 'assets/images/mockup/slides/slide-mobile.png',
+            title: 'Sed ut perspiciatis unde omnis iste natus error',
+            text: 'Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur',
+        },
+    ]
+}%}
+
 {% block main %}
     <div class="Container">
-        <h1>Hello, world!</h1>
-        <br><a href="https://feip.co">FEIP</a>
+        <div class="Layout__section Layout_section--slider">
+            {% include '@components/slider/slider.twig' with {
+                items: scope.slides,
+            } %}
+        </div>
     </div>
 {% endblock %}

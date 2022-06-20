@@ -1,0 +1,125 @@
+html:root {
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-horizontal-gap: 8px;
+    --swiper-pagination-color: #{$color-green};
+    --swiper-pagination-bullet-inactive-color: #{$color-gray--light};
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-navigation-size: 48px;
+    --swiper-navigation-color: white;
+}
+
+.swiper-pagination-bullets {
+    @include vw-sm-down {
+        display: none;
+    }
+}
+
+.swiper-button {
+    &-prev,
+    &-next {
+        background-position: center;
+        background-repeat: no-repeat;
+
+        :root & {
+            width: 48px;
+            background-color: $color-green;
+            border-radius: 10px;
+
+            @include vw-sm-down {
+                display: none;
+            }
+        }
+
+        &::after {
+            display: none;
+        }
+    }
+
+    &-prev {
+        background-image: url(/assets/icons/arrow-left-white.svg);
+
+        :root & {
+            left: 16px;
+        }
+    }
+
+    &-next {
+        background-image: url(/assets/icons/arrow-right-white.svg);
+
+        :root & {
+            right: 16px;
+        }
+    }
+}
+
+.swiper-horizontal {
+    & > .swiper-pagination-bullets {
+        :root & {
+            bottom: 40px;
+        }
+    }
+}
+
+.Slider {
+    border-radius: 30px;
+}
+
+.Slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 450px;
+    padding-x: 144px;
+
+    @include vw-md-down {
+        padding-x: 72px;
+    }
+
+    @include vw-sm-down {
+        justify-content: flex-end;
+        height: 391px;
+        padding-x: 24px;
+    }
+
+    &__picture,
+    &__image {
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+
+    &__picture {
+        z-index: -1;
+    }
+
+    &__image {
+        object-fit: cover;
+    }
+
+    &__content {
+        @include vw-md-up {
+            max-width: 459px;
+        }
+
+        @include vw-sm-down {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__title,
+    &__text {
+        color: white;
+    }
+
+    &__title {
+        margin-bottom: 12px;
+        font-weight: $font-weight-bold;
+        font-size: toRem(46px);
+        line-height: 1.2;
+
+        @include vw-md-down {
+            font-size: toRem(30px);
+        }
+    }
+}
